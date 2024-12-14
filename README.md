@@ -21,11 +21,9 @@ This project was created to:
 
 ## Screenshots
 
-![Map View](ss8.jpg)
-![Map View](ss9.jpg)
-![Map View](ss10.jpg)
+<img src="ss8.jpg" alt="Adding Marker" width="400">
+<img src="ss9.jpg" alt="Adding Marker" width="400">
 <img src="ss10.jpg" alt="Adding Marker" width="400">
-
 
 
 
