@@ -21,9 +21,9 @@ This project was created to:
 
 ## Screenshots
 
-![Map View](ss8.png)
-![Map View](ss9.png)
-![Map View](ss10.png)
+![Map View](ss8.jpg)
+![Map View](ss9.jpg)
+![Map View](ss10.jpg)
 
 
 
