@@ -24,6 +24,7 @@ This project was created to:
 ![Map View](ss8.jpg)
 ![Map View](ss9.jpg)
 ![Map View](ss10.jpg)
+<img src="ss10.jpg" alt="Adding Marker" width="400">
 
 
 
