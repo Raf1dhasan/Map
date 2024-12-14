@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Search bar at the top -->
+    <LinearLayout
+        android:id="@+id/search_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:background="#FFFFFF">
+
+        <AutoCompleteTextView
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter location"
+            android:padding="10dp"
+            android:completionThreshold="1"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search" />
+    </LinearLayout>
+
+    <!-- Google Map Fragment -->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_bar_layout"
+        android:layout_marginTop="5dp" />
+
+    <!-- Street View Fragment (initially hidden) -->
+    <fragment
+        android:id="@+id/street_view_fragment"
+        android:name="com.google.android.gms.maps.SupportStreetViewPanoramaFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- Buttons for changing views (Vertically aligned below the search bar) -->
+    <LinearLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/search_bar_layout"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp">
+
+        <!-- Buttons for switching map views -->
+        <Button
+            android:id="@+id/btnNormalView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal View" />
+
+        <Button
+            android:id="@+id/btnSatelliteView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Satellite View" />
+
+        <Button
+            android:id="@+id/btnStreetView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Street View" />
+
+        <!-- Custom Compass Icon below the Street View button -->
+        <ImageView
+            android:id="@+id/customCompassIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/north" />
+    </LinearLayout>
+
+    <!-- Show Current Location Button (Bottom Right) -->
+    <Button
+        android:id="@+id/btnCurrentLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Current Location"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp" />
+
+</RelativeLayout>
